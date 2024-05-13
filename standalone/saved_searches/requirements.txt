@@ -1,0 +1,6 @@
+deprecation==2.1.0
+dill==0.3.8
+packaging==24.0
+python-slugify==8.0.4
+splunk-sdk==2.0.1
+text-unidecode==1.3
