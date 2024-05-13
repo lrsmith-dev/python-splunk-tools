@@ -39,8 +39,9 @@ def download_saved_searches( splunkClient, outputFormat ):
 
 def list_saved_searches( splunkClient, outputFormat ):
     savedsearches = splunkClient.saved_searches
+    print(f"name,app,owner")
     for saved_search in savedsearches:
-       print(f"{ saved_search.access['app'] } : {saved_search.name}")
+       print(f"\"{saved_search.name}\",\"{saved_search.access['app']}\",\"{ saved_search.access['owner'] }\"")
 
 # Given a savedsearches.conf from a Splunk Server, convert to a dict and return.
 def import_savedsearches_defaults():
